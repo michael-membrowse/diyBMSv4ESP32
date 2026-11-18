@@ -1,0 +1,178 @@
+[
+  {
+    "target_name": "attiny-module-V450_2K4",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_UNFLAGS=\"-DMILLIS_USE_TIMERB1\" PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V450_2K4/firmware.map\" pio run -d ATTINYCellModule -e V450_2K4 && mkdir -p /home/runner/membrowse-ld && cp \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avrxmega3.xn | head -1)\" /home/runner/membrowse-ld/avrxmega3.xn && printf 'MEMORY\\n{\\n  mapped_flash (r) : ORIGIN = 0x8000, LENGTH = 16K\\n}\\n' > /home/runner/membrowse-ld/attiny1624-mapped-flash.ld",
+    "elf": "ATTINYCellModule/.pio/build/V450_2K4/module_fw_V450_2K4_ATtiny1624_450_e0_h0_l0.elf",
+    "ld": "/home/runner/membrowse-ld/avrxmega3.xn /home/runner/membrowse-ld/attiny1624-mapped-flash.ld",
+    "map_file": "ATTINYCellModule/.pio/build/V450_2K4/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=16K __DATA_REGION_ORIGIN__=0x803800 __DATA_REGION_LENGTH__=2K __EEPROM_REGION_LENGTH__=256",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V450_10K",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_UNFLAGS=\"-DMILLIS_USE_TIMERB1\" PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V450_10K/firmware.map\" pio run -d ATTINYCellModule -e V450_10K && mkdir -p /home/runner/membrowse-ld && cp \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avrxmega3.xn | head -1)\" /home/runner/membrowse-ld/avrxmega3.xn && printf 'MEMORY\\n{\\n  mapped_flash (r) : ORIGIN = 0x8000, LENGTH = 16K\\n}\\n' > /home/runner/membrowse-ld/attiny1624-mapped-flash.ld",
+    "elf": "ATTINYCellModule/.pio/build/V450_10K/module_fw_V450_10K_ATtiny1624_450_e0_h0_l0.elf",
+    "ld": "/home/runner/membrowse-ld/avrxmega3.xn /home/runner/membrowse-ld/attiny1624-mapped-flash.ld",
+    "map_file": "ATTINYCellModule/.pio/build/V450_10K/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=16K __DATA_REGION_ORIGIN__=0x803800 __DATA_REGION_LENGTH__=2K __EEPROM_REGION_LENGTH__=256",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V450_5K",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_UNFLAGS=\"-DMILLIS_USE_TIMERB1\" PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V450_5K/firmware.map\" pio run -d ATTINYCellModule -e V450_5K && mkdir -p /home/runner/membrowse-ld && cp \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avrxmega3.xn | head -1)\" /home/runner/membrowse-ld/avrxmega3.xn && printf 'MEMORY\\n{\\n  mapped_flash (r) : ORIGIN = 0x8000, LENGTH = 16K\\n}\\n' > /home/runner/membrowse-ld/attiny1624-mapped-flash.ld",
+    "elf": "ATTINYCellModule/.pio/build/V450_5K/module_fw_V450_5K_ATtiny1624_450_e0_h0_l0.elf",
+    "ld": "/home/runner/membrowse-ld/avrxmega3.xn /home/runner/membrowse-ld/attiny1624-mapped-flash.ld",
+    "map_file": "ATTINYCellModule/.pio/build/V450_5K/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=16K __DATA_REGION_ORIGIN__=0x803800 __DATA_REGION_LENGTH__=2K __EEPROM_REGION_LENGTH__=256",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V400",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V400/firmware.map\" pio run -d ATTINYCellModule -e V400 && mkdir -p /home/runner/membrowse-ld && sed 's/ORIGIN = \\(0x800060\\|__DATA_REGION_ORIGIN__\\),/ORIGIN = 0x800100,/' \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avr25.xn | head -1)\" > /home/runner/membrowse-ld/avr25-attiny841.xn",
+    "elf": "ATTINYCellModule/.pio/build/V400/module_fw_V400_attiny841_400_eF4_hD6_l62.elf",
+    "ld": "/home/runner/membrowse-ld/avr25-attiny841.xn",
+    "map_file": "ATTINYCellModule/.pio/build/V400/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=8K __DATA_REGION_LENGTH__=512 __EEPROM_REGION_LENGTH__=512",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V410",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V410/firmware.map\" pio run -d ATTINYCellModule -e V410 && mkdir -p /home/runner/membrowse-ld && sed 's/ORIGIN = \\(0x800060\\|__DATA_REGION_ORIGIN__\\),/ORIGIN = 0x800100,/' \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avr25.xn | head -1)\" > /home/runner/membrowse-ld/avr25-attiny841.xn",
+    "elf": "ATTINYCellModule/.pio/build/V410/module_fw_V410_attiny841_410_eF4_hD6_l62.elf",
+    "ld": "/home/runner/membrowse-ld/avr25-attiny841.xn",
+    "map_file": "ATTINYCellModule/.pio/build/V410/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=8K __DATA_REGION_LENGTH__=512 __EEPROM_REGION_LENGTH__=512",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V420",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V420/firmware.map\" pio run -d ATTINYCellModule -e V420 && mkdir -p /home/runner/membrowse-ld && sed 's/ORIGIN = \\(0x800060\\|__DATA_REGION_ORIGIN__\\),/ORIGIN = 0x800100,/' \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avr25.xn | head -1)\" > /home/runner/membrowse-ld/avr25-attiny841.xn",
+    "elf": "ATTINYCellModule/.pio/build/V420/module_fw_V420_attiny841_420_eF4_hD6_l62.elf",
+    "ld": "/home/runner/membrowse-ld/avr25-attiny841.xn",
+    "map_file": "ATTINYCellModule/.pio/build/V420/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=8K __DATA_REGION_LENGTH__=512 __EEPROM_REGION_LENGTH__=512",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V420_SWAPR19R20",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V420_SWAPR19R20/firmware.map\" pio run -d ATTINYCellModule -e V420_SWAPR19R20 && mkdir -p /home/runner/membrowse-ld && sed 's/ORIGIN = \\(0x800060\\|__DATA_REGION_ORIGIN__\\),/ORIGIN = 0x800100,/' \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avr25.xn | head -1)\" > /home/runner/membrowse-ld/avr25-attiny841.xn",
+    "elf": "ATTINYCellModule/.pio/build/V420_SWAPR19R20/module_fw_V420_SWAPR19R20_attiny841_420_SWAPR19R20_eF4_hD6_l62.elf",
+    "ld": "/home/runner/membrowse-ld/avr25-attiny841.xn",
+    "map_file": "ATTINYCellModule/.pio/build/V420_SWAPR19R20/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=8K __DATA_REGION_LENGTH__=512 __EEPROM_REGION_LENGTH__=512",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V421",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V421/firmware.map\" pio run -d ATTINYCellModule -e V421 && mkdir -p /home/runner/membrowse-ld && sed 's/ORIGIN = \\(0x800060\\|__DATA_REGION_ORIGIN__\\),/ORIGIN = 0x800100,/' \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avr25.xn | head -1)\" > /home/runner/membrowse-ld/avr25-attiny841.xn",
+    "elf": "ATTINYCellModule/.pio/build/V421/module_fw_V421_attiny841_421_eF4_hD6_l62.elf",
+    "ld": "/home/runner/membrowse-ld/avr25-attiny841.xn",
+    "map_file": "ATTINYCellModule/.pio/build/V421/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=8K __DATA_REGION_LENGTH__=512 __EEPROM_REGION_LENGTH__=512",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V421_LTO",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V421_LTO/firmware.map\" pio run -d ATTINYCellModule -e V421_LTO && mkdir -p /home/runner/membrowse-ld && sed 's/ORIGIN = \\(0x800060\\|__DATA_REGION_ORIGIN__\\),/ORIGIN = 0x800100,/' \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avr25.xn | head -1)\" > /home/runner/membrowse-ld/avr25-attiny841.xn",
+    "elf": "ATTINYCellModule/.pio/build/V421_LTO/module_fw_V421_LTO_attiny841_421_eF4_hD6_l62.elf",
+    "ld": "/home/runner/membrowse-ld/avr25-attiny841.xn",
+    "map_file": "ATTINYCellModule/.pio/build/V421_LTO/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=8K __DATA_REGION_LENGTH__=512 __EEPROM_REGION_LENGTH__=512",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V440",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V440/firmware.map\" pio run -d ATTINYCellModule -e V440 && mkdir -p /home/runner/membrowse-ld && sed 's/ORIGIN = \\(0x800060\\|__DATA_REGION_ORIGIN__\\),/ORIGIN = 0x800100,/' \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avr25.xn | head -1)\" > /home/runner/membrowse-ld/avr25-attiny841.xn",
+    "elf": "ATTINYCellModule/.pio/build/V440/module_fw_V440_attiny841_440_eF4_hD6_l6C.elf",
+    "ld": "/home/runner/membrowse-ld/avr25-attiny841.xn",
+    "map_file": "ATTINYCellModule/.pio/build/V440/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=8K __DATA_REGION_LENGTH__=512 __EEPROM_REGION_LENGTH__=512",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V440_COMMS_5K",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V440_COMMS_5K/firmware.map\" pio run -d ATTINYCellModule -e V440_COMMS_5K && mkdir -p /home/runner/membrowse-ld && sed 's/ORIGIN = \\(0x800060\\|__DATA_REGION_ORIGIN__\\),/ORIGIN = 0x800100,/' \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avr25.xn | head -1)\" > /home/runner/membrowse-ld/avr25-attiny841.xn",
+    "elf": "ATTINYCellModule/.pio/build/V440_COMMS_5K/module_fw_V440_COMMS_5K_attiny841_440_eF4_hD6_l6C.elf",
+    "ld": "/home/runner/membrowse-ld/avr25-attiny841.xn",
+    "map_file": "ATTINYCellModule/.pio/build/V440_COMMS_5K/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=8K __DATA_REGION_LENGTH__=512 __EEPROM_REGION_LENGTH__=512",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "attiny-module-V440_COMMS_9K6",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "PLATFORMIO_BUILD_FLAGS=\"-Wl,-Map=.pio/build/V440_COMMS_9K6/firmware.map\" pio run -d ATTINYCellModule -e V440_COMMS_9K6 && mkdir -p /home/runner/membrowse-ld && sed 's/ORIGIN = \\(0x800060\\|__DATA_REGION_ORIGIN__\\),/ORIGIN = 0x800100,/' \"$(ls -d $HOME/.platformio/packages/toolchain-atmelavr*/avr/lib/ldscripts/avr25.xn | head -1)\" > /home/runner/membrowse-ld/avr25-attiny841.xn",
+    "elf": "ATTINYCellModule/.pio/build/V440_COMMS_9K6/module_fw_V440_COMMS_9K6_attiny841_440_eF4_hD6_l6C.elf",
+    "ld": "/home/runner/membrowse-ld/avr25-attiny841.xn",
+    "map_file": "ATTINYCellModule/.pio/build/V440_COMMS_9K6/firmware.map",
+    "linker_vars": "__TEXT_REGION_LENGTH__=8K __DATA_REGION_LENGTH__=512 __EEPROM_REGION_LENGTH__=512",
+    "skip_sections": "",
+    "partition_table": ""
+  },
+  {
+    "target_name": "stm32-module-V490_AUTOBAUD_VREF4096",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "sed 's|^platform = platformio/ststm32@.*|platform = platformio/ststm32@19.7.1|' STM32All-In-One/platformio.ini > /tmp/membrowse-stm32-V490_AUTOBAUD_VREF4096.ini && (pio run -d STM32All-In-One -c /tmp/membrowse-stm32-V490_AUTOBAUD_VREF4096.ini -e V490_AUTOBAUD_VREF4096); rc=$?; git checkout -- STM32All-In-One/include/EmbeddedFiles_Defines.h 2>/dev/null; test $rc -eq 0",
+    "elf": "STM32All-In-One/.pio/build/V490_AUTOBAUD_VREF4096/module_fw_V490_AUTOBAUD_VREF4096_genericSTM32F030K6T6.elf",
+    "ld": "STM32All-In-One/ldscript.ld",
+    "map_file": "STM32All-In-One/.pio/build/V490_AUTOBAUD_VREF4096/module_fw_V490_AUTOBAUD_VREF4096_genericSTM32F030K6T6.map",
+    "linker_vars": "",
+    "skip_sections": "._user_heap_stack",
+    "partition_table": ""
+  },
+  {
+    "target_name": "stm32-module-V490_AUTOBAUD_VREF4500",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "sed 's|^platform = platformio/ststm32@.*|platform = platformio/ststm32@19.7.1|' STM32All-In-One/platformio.ini > /tmp/membrowse-stm32-V490_AUTOBAUD_VREF4500.ini && (pio run -d STM32All-In-One -c /tmp/membrowse-stm32-V490_AUTOBAUD_VREF4500.ini -e V490_AUTOBAUD_VREF4500); rc=$?; git checkout -- STM32All-In-One/include/EmbeddedFiles_Defines.h 2>/dev/null; test $rc -eq 0",
+    "elf": "STM32All-In-One/.pio/build/V490_AUTOBAUD_VREF4500/module_fw_V490_AUTOBAUD_VREF4500_genericSTM32F030K6T6.elf",
+    "ld": "STM32All-In-One/ldscript.ld",
+    "map_file": "STM32All-In-One/.pio/build/V490_AUTOBAUD_VREF4500/module_fw_V490_AUTOBAUD_VREF4500_genericSTM32F030K6T6.map",
+    "linker_vars": "",
+    "skip_sections": "._user_heap_stack",
+    "partition_table": ""
+  },
+  {
+    "target_name": "esp32-controller",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "rm -rf ESPController/.pio && rm -rf /home/runner/membrowse-ld/esp32-controller && mkdir -p ESPController/data/avr && pio run -d ESPController -e esp32-devkitc && F=$(awk 'match($0, /\\/[^ ()]*\\/framework-arduinoespressif32[^\\/ ()]*\\//) { print substr($0, RSTART, RLENGTH); exit }' ESPController/.pio/build/esp32-devkitc/diybms_controller_firmware_espressif32_esp32-devkitc.map) && test -n \"$F\" && mkdir -p /home/runner/membrowse-ld/esp32-controller && cp \"${F}tools/sdk/esp32/ld/memory.ld\" \"${F}tools/sdk/esp32/ld/sections.ld\" /home/runner/membrowse-ld/esp32-controller/",
+    "elf": "ESPController/.pio/build/esp32-devkitc/diybms_controller_firmware_espressif32_esp32-devkitc.elf",
+    "ld": "/home/runner/membrowse-ld/esp32-controller/memory.ld /home/runner/membrowse-ld/esp32-controller/sections.ld",
+    "map_file": "ESPController/.pio/build/esp32-devkitc/diybms_controller_firmware_espressif32_esp32-devkitc.map",
+    "linker_vars": "",
+    "skip_sections": "",
+    "partition_table": "ESPController/.pio/build/esp32-devkitc/partitions.bin"
+  },
+  {
+    "target_name": "esp32-boardtest",
+    "setup_cmd": "pip install platformio==6.1.19",
+    "build_cmd": "rm -rf ESP32BoardTest/.pio && rm -rf /home/runner/membrowse-ld/esp32-boardtest && pio run -d ESP32BoardTest -e esp32-devkitc && F=$(awk 'match($0, /\\/[^ ()]*\\/framework-arduinoespressif32[^\\/ ()]*\\//) { print substr($0, RSTART, RLENGTH); exit }' ESP32BoardTest/.pio/build/esp32-devkitc/diybms_boardtest_espressif32_esp32-devkitc.map) && test -n \"$F\" && mkdir -p /home/runner/membrowse-ld/esp32-boardtest && cp \"${F}tools/sdk/esp32/ld/memory.ld\" \"${F}tools/sdk/esp32/ld/sections.ld\" /home/runner/membrowse-ld/esp32-boardtest/",
+    "elf": "ESP32BoardTest/.pio/build/esp32-devkitc/diybms_boardtest_espressif32_esp32-devkitc.elf",
+    "ld": "/home/runner/membrowse-ld/esp32-boardtest/memory.ld /home/runner/membrowse-ld/esp32-boardtest/sections.ld",
+    "map_file": "ESP32BoardTest/.pio/build/esp32-devkitc/diybms_boardtest_espressif32_esp32-devkitc.map",
+    "linker_vars": "",
+    "skip_sections": "",
+    "partition_table": "ESP32BoardTest/.pio/build/esp32-devkitc/partitions.bin"
+  }
+]

@@ -1,5 +1,7 @@
 # diyBMS v4
 
+[![MemBrowse](https://membrowse.com/badge.svg)](https://membrowse.com/public/stuartpittaway/diyBMSv4ESP32)
+
 Version 4 of the diyBMS.  Do-it-yourself battery management system for Lithium ion battery packs and cells
 
 If you are looking for version 3 of this project take a look here https://github.com/stuartpittaway/diyBMS
